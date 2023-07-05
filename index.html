@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAMBURINS</title>
+
+  <!-- 초기화 -->
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.4.9/css/reset.min.css"
+  />
+
+  <!-- 파비콘 -->
+  <link rel="icon" href="./favicon.ico">
+
+  <!-- 구글 폰트 -->
+  <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Poppins:wght@200;400&display=swap"
+      rel="stylesheet"
+  />
+
+  <!-- 구글 아이콘 -->
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+
+  <!-- lodash : 스크롤을 제어할 수 있는 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- gshap : 자바스크립트 애니메이션 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- ScrollMagic : 스크롤에 따라 해당영역 감지 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+  <!-- 메인 css -->
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/scrollmagic.css">
+
+  <!-- swiper slide -->
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <script defer src="./js/index.js"></script>
+</head>
+<body>
+  <!-- A area -->
+  <header>
+    <!-- 검색 창 -->
+    <div id="search">
+      <div class="material-icons close">cancel</div>
+      <div class="inner">
+        <input type="text" placeholder="검색어를 입력하세요." class="inputBox">
+        <div class="search-wrap">
+          <div class="new">
+            <p>신제품을 만나보세요.</p>
+            <div class="new-img">
+              <ul class="search-top">
+                <li><img src="./images/search_img1.png" alt="new item"></li>
+                <li><img src="./images/search_img2.png" alt="new item"></li>
+                <li><img src="./images/search_img3.png" alt="new item"></li>
+              </ul>
+              <ul class="search-bottom">
+                <li><img src="./images/search_img4.png" alt="new item"></li>
+                <li><img src="./images/search_img5.png" alt="new item"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="./images/search_side_img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 로고 -->
+    <h1><a href="/">TAMBURINS</a></h1>
+    <!-- pc 메뉴 -->
+      <nav class="pc-nav">
+        <ul>
+          <li><a href="#">제품보기</a></li>
+          <li><a href="#">베스트셀러</a></li>
+          <li><a href="#">선물추천</a></li>
+          <li><a href="#">매장보기</a></li>
+        </ul>
+      </nav>
+    <!-- pc 사이드 -->
+    <div class="pc-side">
+      <ul>
+        <li>
+          <input type="text" placeholder="검색어를 입력하세요." class="open">
+        </li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">로그인</a></li>
+      </ul>
+    </div>
+    <!-- 모바일/탭 메뉴 + 검색 -->
+  <div class="search">
+    <div class="material-icons">
+      search
+    </div>
+  </div>
+  <div class="menu-toggle-btn">
+    <div id="one" class="toggle"></div>
+    <div id="two" class="toggle"></div>
+    <div id="three" class="toggle"></div>
+  </div>
+
+  <!-- 모바일/탭 메뉴 -->
+    <nav class="mo-nav">
+      <div class="mo-side">
+        <a href="#">My Page</a>
+        <a href="#">Login</a>
+      </div>
+      <ul>
+        <li><a href="#">제품보기</a></li>
+        <li><a href="#">베스트셀러</a></li>
+        <li><a href="#">선물추천</a></li>
+        <li><a href="#">매장보기</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  
+  <!-- B area -->
+  <section id="video">
+    <video muted loop autoplay>
+      <source src="./images/B_video.mp4">
+    </video>
+    <img src="./images/mo-A-img.webp" alt="main img" class="mo-video">
+  </section>
+
+
+  <!-- C area -->
+  <section id="best-item">
+    <div class="inner">
+      <h2>BEST SELLERS</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/c_img1.png" alt="bestselleritem">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+          <img src="./images/c_img2.png" alt="bestselleritem">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/c_img3.png" alt="bestselleritem">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/c_img4.png" alt="bestselleritem">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/c_img5.png" alt="bestselleritem">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/c_img6.png" alt="bestselleritem">
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-next">
+      <a href="#">
+        <div class="material-icons">
+          arrow_forward_ios
+        </div>
+      </a>
+    </div>
+    <div class="swiper-prev">
+      <a href="#">
+        <div class="material-icons">
+          arrow_back_ios
+          </div>
+      </a>
+    </div>
+    </div>
+  </section>
+
+
+  <div class="tab-wrap">
+    <!-- D area -->
+  <section id="candle" class="scroll-spy">
+    <div class="inner">
+      <div class="video">
+        <video muted loop autoplay class="back-to-position to-left delay-0">
+          <source src="https://www.tamburins.com/img/renew_dummy/category/[220123]main_web_1920x710.mp4">
+        </video>
+        <ul>
+          <li class="mo-video1"><img src="./images/mo-D-img 1.png" alt="올팩티브 캔들"></li>
+          <li class="mo-video2 back-to-position to-right delay-0"><img src="./images/mo-D-img 2.png" alt="올팩티브 캔들"></li>
+        </ul>
+      </div>
+      <div class="text-box">
+        <h3 class="back-to-position to-right delay-1">올팩티브 아카이브 캔들</h3>
+        <p class="pc-candle back-to-position to-right delay-2" >
+          하나씩 정성을 들여 수작업으로 제작되는 '올팩티브 아카이브 캔들'은<br>
+          가장 원초적인 자연에 대한 접근에서 비롯되었습니다.<br>
+          콘크리트로 이루어진 캔들 표면의 자연스러운 텍스쳐는<br>
+          마치 얼어붙은 대지 위에 펼쳐진 설경과 빙산의 일부분을 떠올리게 합니다.<br>
+          기억의 향기를 담은 따듯한 불씨가 당신의 공간을 안락함으로 채워줍니다.<br>
+        </p>
+        <p class="mo-candle back-to-position to-right delay-2">
+          하나씩 정성을 들여 수작업으로 제작되는<br>
+          '올팩티브 아카이브 캔들'은<br>
+          가장 원초적인 자연에 대한 접근에서 비롯되었습니다.<br>
+          기억의 향기를 담은 따듯한 불씨가<br>
+          당신의 공간을 안락함으로 채워줍니다.<br>
+        </p>
+        <div class="back-to-position to-right delay-3">
+          <button class="btn"><a href="#">자세히 보기</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- E area -->
+  <section id="perfume" class="scroll-spy">
+    <div class="inner">
+      <div class="video">
+        <video muted loop autoplay class="back-to-position to-right delay-0">
+          <source src="https://web-resource.gentlemonster.com/tamburins/video/list/List_Page_PC_1920_710_1.mp4">
+        </video>
+        <ul>
+          <li class="mo-video back-to-position to-left delay-0"><img src="./images/mo-E-img1.png" alt="퍼퓸"></li>
+          <li class="mo-video2"><img src="./images/mo-E-img2.png" alt="퍼퓸"></li>
+        </ul>
+      </div>
+      <div class="text-box">
+        <h3 class="back-to-position to-left delay-1">퍼퓸 컬렉션</h3>
+        <p class="pc-perfume back-to-position to-left delay-2">
+          [SOLACE: 한줌의 위안]<br>
+          위안에서 오는 다양한 감정을 표현한 이번 향수 컬렉션은<br>
+          시간이 흐르면서 일어나는 다채로운 향의 변화를 온전히 느낄 수 있는 향수입니다.<br>
+          세상에 흩어진 모든 이야기에서 영감을 받은 감각적인 향이 단조로운 일상에<br>자유롭고 새로운 리듬을 부여합니다.<br>
+          탬버린즈가 찾아낸 규정되지 않은 아름다움을 향수를 통해 경험해보세요.<br>
+        </p>
+        <p class="mo-perfume back-to-position to-left delay-2">
+          [SOLACE: 한줌의 위안]<br>
+          위안에서 오는 다양한 감정을 표현한 이번 향수 컬렉션은<br>
+          시간이 흐르면서 일어나는 다채로운 향의 변화를<br>
+          온전히 느낄 수 있는 향수입니다.<br>
+        </p>
+        <div class="back-to-position to-left delay-3">
+          <button class="btn"><a href="#">자세히 보기</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+  <!-- F area -->
+  <section id="lotion" class="scroll-spy">
+    <div class="box"></div>
+    <div class="inner">
+      <div class="text-box">
+        <h3 class="back-to-position delay-0">샤워리 바디워시&로션</h3>
+        <p class="pc-lotion back-to-position delay-1">
+          자연에서 내리는 비에서 영감을 받은 샤워리바디는 내 샤워실에 내리는 향기로운 소나기입니다.<br>
+          폭풍이 지나간 자리에 새싹이 움트이는 것처럼<br>
+          시원한 비가 지난 뒤 남은 고요한 시간에 우리는 사고가 무한히 확장되는 듯한 <br>
+          일종의 해방감과 함께 맑아진 머릿속이 창의적인 영감으로 가득 메워지는 경이로운 경험을 하기도 합니다.<br>
+        </p>
+        <!-- 탭 글씨 --> 
+        <p class="tab-lotion back-to-position delay-1">
+          자연에서 내리는 비에서 영감을 받은 샤워리바디는 내 샤워실에 내리는 향기로운 소나기입니다.
+        </p>
+        <div class="back-to-position delay-3">
+          <button class="btn"><a href="#">자세히 보기</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- G area -->
+  <section id="shortcut">
+    <div class="inner">
+      <ul>
+        <li>
+          <img src="./images/g_img1.png" alt="EXHIBITION">
+          <a href="#">EXHIBITION</a>
+        </li>
+        <li>
+          <img src="./images/g_img2.png" alt="STORE">
+          <a href="#">STORE</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- H area -->
+  <footer>
+    <div class="inner">
+      <ul class="footer-top-menu">
+        <li><a href="#">선물추천</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">소셜</a></li>
+      </ul>
+      <hr>
+      <ul class="footer-bottom-menu">
+        <li><a href="#">사업자정보확인</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+      </ul>
+      <address>
+        주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 <br>
+        대표번호: 1644-1246 | 이메일: cs@tamburins.com개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws<br>
+        고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실 확인<br>
+        © 탬버린즈<br>
+        대한민국<br>
+      </address>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</body>
+</html>
